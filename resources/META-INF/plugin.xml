@@ -1,0 +1,39 @@
+<idea-plugin version="2">
+    <id>me.zheteng.idea.reverse</id>
+    <name>ReverseText</name>
+    <version>1.0.1</version>
+    <vendor email="junyuecao@gmail.com" url="http://zheteng.me">JunyueCao</vendor>
+
+    <description><![CDATA[
+      Reverse Selected Text
+
+      1. Select text
+      2. Edit->Reserve Text (ctrl =)
+    ]]></description>
+
+    <change-notes><![CDATA[
+      First Release
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="117.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+
+        <action id="ReverseText" class="me.zheteng.idea.reverse.ReverseText" text="ReverseText"
+                description="Reverse selected text">
+            <add-to-group group-id="EditMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl EQUALS"/>
+        </action>
+    </actions>
+
+</idea-plugin>
